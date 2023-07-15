@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-word = "School"
+word = "school"
 word_first_3 = "sch"
 word_last_2 = "ol"
 middle_word = "choo"
