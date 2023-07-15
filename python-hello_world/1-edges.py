@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-word = "school"
-word_first_3 = "sch"
+word = "School"
+word_first_3 = "Sch"
 word_last_2 = "ol"
 middle_word = "choo"
 print("First 3 letters: {}".format(word_first_3))
