@@ -11,6 +11,6 @@ if __name__ == "__main__":
             print(i, sys.argv[1], sep=": ")
 
     else:
-        print(a - 1, " arguments:")
+        print(a - 1, "arguments:")
         for i in range(1, len(sys.argv)):
             print(i, sys.argv[i], sep=": ")
