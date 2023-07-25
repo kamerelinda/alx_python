@@ -8,9 +8,9 @@ if __name__ == "__main__":
     elif a == 2:
         print(a-1, "argument:")
         for i in range(1, len(sys.argv)):
-            print(i, ":", sys.argv[1])
+            print(i, sys.argv[1], sep=": ")
 
     else:
         print(a - 1, " arguments:")
         for i in range(1, len(sys.argv)):
-            print(i, ":", sys.argv[i])
+            print(i, sys.argv[i], sep=": ")
