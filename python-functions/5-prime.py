@@ -1,13 +1,10 @@
 def is_prime(number):
 
-    if number == 1:
+    if number < 2:
         return False
-    elif number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                return False
-                break
-            else:
-                return True
     else:
-        return False
+        # Check for factors from 2 up to the square root of the number
+        for i in range(2, int(number**0.5) + 1):
+            if number % i == 0:
+                return False
+        return True
