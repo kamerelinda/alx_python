@@ -1,14 +1,12 @@
 def fibonacci_sequence(n):
-    num1 = 0
-    num2 = 1
-    count = 1
-    next_num = 0
-    if n > 1:
-        while count <= n:
-            print(next_num, end=", ")
-            count += 1
-            num1 = num2
-            num2 = next_num
-            next_num = num1 + num2
-    else:
-        print("")
+    if n <= 0:
+        return []
+
+    fibonacci_numbers = [0, 1]  # Initialize the list with the first two Fibonacci numbers
+
+    # Generate the Fibonacci numbers up to the nth number
+    while len(fibonacci_numbers) < n:
+        next_fibonacci = fibonacci_numbers[-1] + fibonacci_numbers[-2]
+        fibonacci_numbers.append(next_fibonacci)
+
+    return fibonacci_numbers[:n]
