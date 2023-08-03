@@ -37,5 +37,5 @@ class Square:
                 """for the range equal to size"""
                 print("#" * self.__size)
                 """return # times size"""
-        else:
+        elif self.size == 0:
             print(" ")
