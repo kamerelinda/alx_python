@@ -9,7 +9,7 @@ class Square:
         """private instance attribute"""
         if type(size) != int:
             """if the size is not an integer"""
-            raise TypeError("Size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
             """if size is less than 0"""
             raise ValueError("size must be >= 0")
