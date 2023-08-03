@@ -31,11 +31,11 @@ class Square:
 
     def my_print(self):
         """public method that prints out a square using #"""
-        if self.__size > 0:
+        if self.size == 0:
+            print()
+        else:
             """if size is greater than 0"""
             for i in range(self.__size):
                 """for the range equal to size"""
                 print("#" * self.__size)
                 """return # times size"""
-        elif self.size == 0:
-            print(" ")
