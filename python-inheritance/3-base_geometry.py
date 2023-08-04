@@ -3,4 +3,3 @@
 
 class BaseGeometry:
     """This class passes nothing"""
-    pass
