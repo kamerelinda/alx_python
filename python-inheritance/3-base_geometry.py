@@ -4,7 +4,7 @@
 class BaseGeometry:
     """This class passes nothing"""
 
-    def __dir__(cls) -> None:
+    def __init_subclass__(cls) -> None:
         """Magic method that allows you to override default dir"""
         attributes = super().__dir__()
         """get list of all attributes for this class and exclude __init_subclass"""
