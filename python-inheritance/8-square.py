@@ -13,16 +13,12 @@ class MetaGeometry(type):
 class BaseGeometry(metaclass=MetaGeometry):
     """This class defines a base geometry"""
 
-    def __dir__(cls):
-        """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if
-                attribute != '__init_subclass__')
-
     def area(self):
         """Public instance method that raises an exception"""
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name, value):
+    @staticmethod
+    def integer_validator(name, value):
         """public instance method that validates value"""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
@@ -49,11 +45,6 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """method returns a string"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
-    def __dir__(cls):
-        """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if
-                attribute != '__init_subclass__')
 
 
 class Square(Rectangle):
