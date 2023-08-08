@@ -6,7 +6,8 @@ class MetaGeometry(type):
 
     def __dir__(cls):
         """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
+        return (attribute for attribute in super().__dir__() if
+                attribute != '__init_subclass__')
 
 
 class BaseGeometry(metaclass=MetaGeometry):
@@ -14,7 +15,8 @@ class BaseGeometry(metaclass=MetaGeometry):
 
     def __dir__(cls):
         """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
+        return (attribute for attribute in super().__dir__() if
+                attribute != '__init_subclass__')
 
     def area(self):
         """Public instance method that raises an exception"""
@@ -50,7 +52,8 @@ class Rectangle(BaseGeometry):
 
     def __dir__(cls):
         """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
+        return (attribute for attribute in super().__dir__() if
+                attribute != '__init_subclass__')
 
 
 class Square(Rectangle):
@@ -71,4 +74,5 @@ class Square(Rectangle):
 
     def __dir__(cls):
         """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
+        return (attribute for attribute in super().__dir__() if
+                attribute != '__init_subclass__')
