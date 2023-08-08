@@ -16,7 +16,8 @@ class BaseGeometry(metaclass=MetaGeometry):
         """Public instance method that raises an exception"""
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name, value):
+    @staticmethod
+    def integer_validator(name, value):
         """public instance method that validates value"""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
