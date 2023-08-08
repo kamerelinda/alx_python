@@ -71,8 +71,3 @@ class Square(Rectangle):
     def __str__(self):
         """method returns a string"""
         return "[Rectangle] {}/{}".format(self.__size, self.__size)
-
-    def __dir__(cls):
-        """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if
-                attribute != '__init_subclass__')
