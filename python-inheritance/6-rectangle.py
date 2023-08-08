@@ -12,10 +12,6 @@ class MetaGeometry(type):
 class BaseGeometry(metaclass=MetaGeometry):
     """This class defines a base geometry"""
 
-    def __dir__(cls):
-        """Magic method that allows you to override default dir"""
-        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
-
     def area(self):
         """Public instance method that raises an exception"""
         raise Exception("area() is not implemented")
