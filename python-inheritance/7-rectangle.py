@@ -1,7 +1,7 @@
 """This module improves the class by raising an exception"""
 
 
-class MetaGeometry:
+class MetaGeometry(type):
     """this class overrides the dir init subclass in the class"""
 
     def __dir__(cls):
@@ -9,7 +9,7 @@ class MetaGeometry:
         return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
 
 
-class BaseGeometry(MetaGeometry):
+class BaseGeometry(metaclass=MetaGeometry):
     """This class defines a base geometry"""
 
     def __dir__(cls):
@@ -28,7 +28,7 @@ class BaseGeometry(MetaGeometry):
             raise ValueError("{} must be greater than 0".format(name))
 
 
-class Rectangle(BaseGeometry, MetaGeometry):
+class Rectangle(BaseGeometry):
     """class that inherits BaseGeometry"""
 
     def __init__(self, width, height):
