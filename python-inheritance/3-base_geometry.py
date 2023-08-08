@@ -11,3 +11,4 @@ class MetaGeometry(type):
 
 class BaseGeometry(metaclass=MetaGeometry):
     """This class passes nothing"""
+    pass
