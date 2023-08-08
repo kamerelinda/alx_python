@@ -11,6 +11,7 @@ class MetaGeometry:
 
 class BaseGeometry(MetaGeometry):
     """This class defines a base geometry"""
+
     def __dir__(cls):
         """Magic method that allows you to override default dir"""
         return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
@@ -46,3 +47,7 @@ class Rectangle(BaseGeometry, MetaGeometry):
     def __str__(self):
         """method returns a string"""
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+    def __dir__(cls):
+        """Magic method that allows you to override default dir"""
+        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
