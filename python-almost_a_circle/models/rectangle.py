@@ -5,6 +5,14 @@ from models.base import Base
 class Rectangle(Base):
     """class Rectangle that inherits base"""
 
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """instantiate values"""
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
+
     @property
     def width(self):
         """getter to retrieve private width"""
@@ -13,6 +21,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """setter to set the value of width"""
+        self.validation('width', value)
         self.__width = value
 
     @property
@@ -23,6 +32,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setter to set the value of height"""
+        self.validation('height', value)
         self.__height = value
 
     @property
@@ -33,6 +43,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter to set the value of x"""
+        self.validation('x', value)
         self.__x = value
 
     @property
@@ -43,12 +54,14 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter to set the value of y"""
+        self.validation('y', value)
         self.__y = value
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """instantiate values"""
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        super().__init__(id)
+    @staticmethod
+    def validation(name, value):
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if value <= 0 and name != 'x' and name != 'y':
+            raise ValueError("{} must be > 0".format(name))
+        if value < 0 and (name == 'x' or name == 'y'):
+            raise ValueError("{} must be >= 0".format(name))
