@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""
-imports requests and sys
-"""
 import requests
 import sys
 
