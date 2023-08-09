@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Fetches a URL and prints the X-Request-Id header value.
-Usage: ./fetch_request_id.py <URL>
+
 """
 
 import requests
