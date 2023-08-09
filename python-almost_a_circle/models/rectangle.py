@@ -59,6 +59,7 @@ class Rectangle(Base):
 
     @staticmethod
     def validation(name, value):
+        """validation of the values different for height and weight and x and y"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0 and name != 'x' and name != 'y':
