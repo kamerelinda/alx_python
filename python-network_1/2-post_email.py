@@ -13,5 +13,5 @@ email = sys.argv[2]
 payload = {'email': email}
 response = requests.post(url1, data=payload)
 
-print("Your email is:",response.text)
+print("Your email is:", response.text)
 
