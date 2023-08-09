@@ -2,8 +2,9 @@
 """This script uses request and sys"""
 import requests
 import sys
-"""Takes in a URL, sends a request to the URL and displays 
-the value of the variable X-Request-Id in the response header"""
+"""takes in url as the first argument """
 r = sys.argv[1]
+"""sends a request to the url"""
 response = requests.get(r)
+"""prints the id id variable in the header"""
 print(response.headers['X-Request-Id'])
