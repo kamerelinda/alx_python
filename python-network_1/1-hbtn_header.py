@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""imports a module"""
+"""
+imports requests and sys
+"""
 import requests
 import sys
 
