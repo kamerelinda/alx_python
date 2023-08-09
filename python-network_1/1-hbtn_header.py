@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""This module uses request and sys"""
+"""imports a module"""
 import requests
 import sys
+
 """takes in url as the first argument """
 r = sys.argv[1]
 """sends a request to the url"""
