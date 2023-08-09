@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script uses request and sys"""
+"""This module uses request and sys"""
 import requests
 import sys
 """takes in url as the first argument """
