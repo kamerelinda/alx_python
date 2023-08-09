@@ -1,5 +1,5 @@
-from models.rectangle import Rectangle
 """This module imports methods and arguments from rectangle"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
