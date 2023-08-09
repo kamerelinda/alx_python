@@ -7,11 +7,16 @@ and finally displays the body of the response.
 import requests
 import sys
 
-url1 = sys.argv[1]
-email = sys.argv[2]
 
-payload = {'email': email}
-response = requests.post(url1, data=payload)
+def main():
+    url1 = sys.argv[1]
+    email = sys.argv[2]
 
-print("Your email is:", response.text)
+    payload = {'email': email}
+    response = requests.post(url1, data=payload)
 
+    print("Your email is:", response.text)
+
+
+if __name__ == "__main__":
+    main()
