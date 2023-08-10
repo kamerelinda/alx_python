@@ -15,7 +15,7 @@ def main():
     payload = {'email': email}
     response = requests.post(url1, data=payload)
 
-    print("Your email is:", response.text)
+    print(response.text)
 
 
 if __name__ == "__main__":
