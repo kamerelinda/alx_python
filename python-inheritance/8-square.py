@@ -1,5 +1,4 @@
 """This module improves the class by raising an exception"""
-
 Rectangle = __import__('7-rectangle').Rectangle
 
 
