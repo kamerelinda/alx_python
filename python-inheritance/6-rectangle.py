@@ -1,5 +1,5 @@
 """This module improves the class by raising an exception"""
-BaseGeometry = __import__('5-base_geometry').Rectangle
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
