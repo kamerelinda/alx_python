@@ -11,8 +11,9 @@ def main():
     r = sys.argv[1]
     """sends a request to the url"""
     response = requests.get(r)
-    """prints the id id variable in the header"""
-    print(response.headers['X-Request-Id'])
+    if response.headers['X-Request-Id']:
+        """prints the id id variable in the header"""
+        print(response.headers['X-Request-Id'])
 
 
 if __name__ == "__main__":
