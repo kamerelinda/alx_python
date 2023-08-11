@@ -1,28 +1,6 @@
 """This module improves the class by raising an exception"""
 
-
-class MetaGeometry(type):
-    """this class overrides the dir init subclass in the class"""
-
-    def __dir__(cls):
-        """Magic method that allows you to override default dir"""
-        return (attribute for attribute in super().__dir__() if attribute != '__init_subclass__')
-
-
-class BaseGeometry(metaclass=MetaGeometry):
-    """This class defines a base geometry"""
-
-    def area(self):
-        """Public instance method that raises an exception"""
-        raise Exception("area() is not implemented")
-
-    @staticmethod
-    def integer_validator(name, value):
-        """public instance method that validates value"""
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        elif value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('6-rectangle').Rectangle
 
 
 class Rectangle(BaseGeometry):
