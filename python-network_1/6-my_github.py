@@ -15,12 +15,11 @@ def main():
 
     if response.status_code == 200:
         data = response.json()
-        if id in data:
-            print(data['id'])
-        else:
-            print(None)
+        user_id = data.get('id')
+        if user_id:
+            print(user_id)
     else:
-        print(response.text)
+        print(None)
 
 
 if __name__ == "__main__":
