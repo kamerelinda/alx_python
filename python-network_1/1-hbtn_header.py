@@ -14,6 +14,8 @@ def main():
     if response.headers['X-Request-Id']:
         """prints the id id variable in the header"""
         print(response.headers['X-Request-Id'])
+    else:
+        return None
 
 
 if __name__ == "__main__":
