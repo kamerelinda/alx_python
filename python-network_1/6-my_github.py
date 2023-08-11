@@ -15,9 +15,8 @@ def main():
 
     if response.status_code == 200:
         data = response.json()
-        user_id = data.get('id')
-        if user_id:
-            print(user_id)
+        if data:
+            print(data['id'])
     else:
         print(None)
 
