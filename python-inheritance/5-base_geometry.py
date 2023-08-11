@@ -1,18 +1,17 @@
 """This module improves the class by raising an exception"""
 
 
-class BaseGeometry:
+class Metaclass:
+    def __dir__(cls):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass']
+
+
+class BaseGeometry(metaclass=Metaclass):
     """This class defines a base geometry"""
-    def __dir__(cls) -> None:
+    def __dir__(cls):
         """Magic method that allows you to override default dir"""
-        attributes = super().__dir__()
-        """get list of all attributes for this class and exclude __init_subclass"""
-        list_to_return = []
-        for attr in attributes:
-            if attr != '__init_subclass__':
-                """append this to the list_to_return"""
-                list_to_return.append(attr)
-        return list_to_return
+        return [attribute for attribute in super().__dir__()
+                if attribute != '__init_subclass']
 
     def area(self):
         """Public instance method that raises an exception"""
