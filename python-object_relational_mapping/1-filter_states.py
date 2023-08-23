@@ -19,7 +19,7 @@ def main():
 
     # finding all the states in the database
     cur.execute("SELECT * FROM states "
-                "WHERE name LIKE 'N%' ORDER BY states.id ASC ")
+                "WHERE name LIKE 'N%' NOT 'n%' ORDER BY states.id ASC ")
 
     # obtaining the results
     rows = cur.fetchall()
