@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# This script filters all names of states that begin with an N
 # imports module MySQLdb
 import MySQLdb
 import sys
@@ -17,9 +18,9 @@ def main():
     # create a cursor
     cur = database.cursor()
 
-    # finding all the states in the database
+    # finding all the states in the database beginning with N
     cur.execute("SELECT * FROM states "
-                "WHERE name LIKE 'N%' NOT 'n%' ORDER BY states.id ASC ")
+                "WHERE name LIKE upper('N%') ORDER BY states.id ASC ")
 
     # obtaining the results
     rows = cur.fetchall()
