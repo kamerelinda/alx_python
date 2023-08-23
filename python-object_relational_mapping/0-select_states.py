@@ -6,7 +6,7 @@ import MySQLdb
 def main():
     # Connecting to database in the localhost
     database = MySQLdb.connect(host='localhost', user='root',
-                         passwd='fabi2star.', db='hbtn_0e_0_usa', port=3306)
+                               passwd='fabi2star.', db='hbtn_0e_0_usa', port=3306)
 
     # create a cursor
     cur = database.cursor()
