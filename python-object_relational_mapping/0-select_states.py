@@ -6,10 +6,12 @@ import sys
 
 def main():
     database_name = sys.argv[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
 
     # Connecting to database in the localhost
-    database = MySQLdb.connect(host='localhost', user='root',
-                               passwd='fabi2star.', db=database_name,
+    database = MySQLdb.connect(host='localhost', user=username,
+                               passwd=password, db=database_name,
                                port=3306)
 
     # create a cursor
