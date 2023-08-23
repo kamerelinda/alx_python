@@ -20,7 +20,8 @@ def main():
 
     # finding all the states in the database beginning with N
     cur.execute("SELECT * FROM states "
-                "WHERE name LIKE 'N%' AND name NOT LIKE 'n%'"
+                "WHERE name LIKE 'N%' AND "
+                "BINARY name NOT LIKE 'n%'"
                 "ORDER BY states.id ASC ")
 
     # obtaining the results
