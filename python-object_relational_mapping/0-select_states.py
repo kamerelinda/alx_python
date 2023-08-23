@@ -5,11 +5,11 @@ import MySQLdb
 
 def main():
     # Connecting to database in the localhost
-    db = MySQLdb.connect(host='localhost', user='root',
+    database = MySQLdb.connect(host='localhost', user='root',
                          passwd='fabi2star.', db='hbtn_0e_0_usa', port=3306)
 
     # create a cursor
-    cur = db.cursor()
+    cur = database.cursor()
 
     # finding all the states in the database
     cur.execute("SELECT * FROM states ORDER BY states.id")
@@ -23,7 +23,7 @@ def main():
     cur.close()
 
     # close database
-    db.close()
+    database.close()
 
 
 if __name__ == "__main__":
