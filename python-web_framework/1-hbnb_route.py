@@ -1,3 +1,4 @@
+# This module creates a web application with a routing to hbnb
 from flask import Flask
 
 # creates a flask web application
