@@ -1,18 +1,20 @@
-# This module creates a web application with a routing to hbnb
+""" This module creates a web application with a routing to hbnb """
 from flask import Flask
 
-# creates a flask web application
+
 app = Flask(__name__)
+""" creates a flask web application """
 
 
-# define the route for the root url with strict slashes false
 @app.route('/', strict_slashes=False)
 def greetings():
+    """ define the route for the root url with strict slashes false """
     return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
+    """ define the route for the hbnb url with strict slashes false """
     return "HBNB!"
 
 
