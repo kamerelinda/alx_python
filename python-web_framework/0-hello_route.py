@@ -1,3 +1,4 @@
+# this module creates a flask web application
 from flask import Flask
 
 # creates a flask web application
