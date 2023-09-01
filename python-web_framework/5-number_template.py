@@ -46,7 +46,8 @@ def disp_integer(n):
 def numb_template(n):
     """display an HTML page only if n is an integer:H1 tag:
     “Number: n” inside the tag BODY """
-    return render_template("5-number.html", number=n)
+    if isinstance(n, int):
+        return render_template("5-number.html", number=n)
 
 
 if __name__ == '__main__':
