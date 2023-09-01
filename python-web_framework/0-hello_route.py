@@ -1,13 +1,12 @@
-# this module creates a flask web application
+""" This module creates a flask web application """
 from flask import Flask
 
-# creates a flask web application
 app = Flask(__name__)
 
 
-# define the route for the root url with strict slashes false
 @app.route('/', strict_slashes=False)
 def greetings():
+    """ define the route for the root url with strict slashes false """
     return "Hello HBNB!"
 
 
