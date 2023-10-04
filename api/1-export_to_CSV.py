@@ -2,10 +2,10 @@
 """Python script that, using this REST API, for a given employee ID,
 returns information about his/her tasks,  extend your Python script to export data in the CSV format. """
 
-
+import csv
 import requests
 import sys
-import csv
+
 
 employee_id = int(sys.argv[1])
 
